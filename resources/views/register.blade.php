@@ -42,6 +42,7 @@
 	            <div class="form-group">
 	            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
 	            </div>
+	          <p class="text-center">Sudah memiliki akun? <a href="/login">Masuk</a></p>
 	            <div class="form-group d-md-flex">
 	            	<div class="w-50">
 								</div>

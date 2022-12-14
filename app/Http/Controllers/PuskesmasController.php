@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PuskesmasController extends Controller
 {
-    
+
     public function lihatartikel()
     {
 
@@ -52,6 +52,7 @@ class PuskesmasController extends Controller
     public function docjadwal () {
         return view('doctor/docjadwal');
     }
+
 
     public function doclogin () {
 
@@ -148,9 +149,9 @@ class PuskesmasController extends Controller
         'rekam'=>$rekam
     ]);
   }
-   
+
     public function docregister (){
         return view('doctor/docregister');
     }
-    
+
 }

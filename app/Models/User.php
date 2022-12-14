@@ -26,7 +26,7 @@ class User extends Authenticatable{
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function reservasi(): HasMany
+    public function reservasi()
     {
         return $this->hasMany(reservasi::class);
     }
@@ -35,7 +35,7 @@ class User extends Authenticatable{
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function rekammedis(): HasMany
+    public function RekamMedis()
     {
         return $this->hasMany(RekamMedis::class);
     }

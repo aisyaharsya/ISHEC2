@@ -10,24 +10,24 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img_doc/favicon.png" rel="icon">
-  <link href="assets/img_doc/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img_doc/favicon.png') }}" rel="icon">
+  <link href="{{ asset('assets/img_doc/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/quill/quill.snow.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="css/style_doc.css" rel="stylesheet">
+  <link href="{{ asset('css/style_doc.css') }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.0
@@ -55,7 +55,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img_doc/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="{{ asset('assets/img_doc/profile-img.jpg') }}" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">dr.Tama Raharja</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -112,13 +112,7 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-heading">Pages</li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="/docprofile">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
+<!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="" href="/docrm">
@@ -144,17 +138,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.min.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/chart.js/chart.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/echarts/echarts.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/quill/quill.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+  <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="js/main_doc.js"></script>
+  <script src="{{ asset('js/main_doc.js') }}"></script>
 
 </body>
 

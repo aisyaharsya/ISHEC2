@@ -6,6 +6,7 @@
     use App\Http\Controllers\LoginController;
     use App\Http\Controllers\RegisterController;
     use App\Http\Controllers\PuskesmasController;
+    use App\Http\Controllers\DocrmformController;
     use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\ScheduleController;
 use App\Models\DoctorSchedule;
@@ -49,8 +50,15 @@ use App\Models\DoctorSchedule;
         Route::get('/docjadwal', [PuskesmasController::class, 'docjadwal']);
         Route::get('/doc',[DoctorScheduleController::class, 'index']);
         Route::get('/docprofile', [PuskesmasController::class, 'docprofile']);
-        Route::get('/docrmform', [PuskesmasController::class, 'docrmform']);
-        Route::get('/docrm', [PuskesmasController::class, 'docrm']);
+        Route::get('/docrmform', [DocrmformController::class, 'docrmform']);
+        Route::post('/insertdata', [DocrmformController::class, 'insertdata']);
+        Route::get('/docrm', [DocrmformController::class, 'view']);
+        Route::post('/lihatrm', [DocrmformController::class, 'lihatrm']);
+        Route::get('/docrmformEdit/{id}', [DocrmformController::class, 'edit']);
+        Route::delete('/hapus/{id}', [DocrmformController::class, 'destroy']);
+
+
+
     });
     // 2 pasien
     Route::group(['middleware'=>['auth','cekLevel:2']],function ()
