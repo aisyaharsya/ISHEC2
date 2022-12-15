@@ -42,6 +42,7 @@ use App\Models\DoctorSchedule;
         Route::post('/rekam-medis',[PuskesmasController::class,'rekammedisfind']);
         Route::get('/input-data',[PuskesmasController::class,'InputData']);
         Route::post('/input-data',[PuskesmasController::class,'InputDatafind']);
+        Route::post('/update-profile-pasien',[PuskesmasController::class,'updateProfile']);
         Route::get('/adartikel', [PuskesmasController::class, 'adartikel']);
     });
     // 1 dokter

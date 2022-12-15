@@ -119,14 +119,40 @@ class PuskesmasController extends Controller
 
     ]);
   }
-  public function InputDatapost (){
+  public function updateProfile()
+  {
+    User::find(request('id'))->update([
+        "nama" => request('nama'),
+        "alamat" => request('alamat'),
+        "tanggal_lahir" => request('tanggal_lahir'),
+        "no_telepon" => request('no_telepon'),
+        "jenis_kelamin" => request('jenis_kelamin')
+    ]);
+    return back()->withSuccess('Data berhasil di ubah');
+  }
+  public function InputDatafind (){
     $pasien = User::where('level','2')->get();
     $dokter = User::where('level','1')->get();
+    if(request('id_pasien')!=null){
+       $editpasien = User::find(request('id_pasien'));
+       return view('admin.adinputdata',[
+        'edit_pasien'=>$editpasien,
+        'pasien'=>$pasien,
+        'dokter'=>$dokter
+    ]);
+    }
+    if(request('id_dokter')!=null){
+        $editdokter = User::find(request('id_dokter'));
+        return view('admin.adinputdata',[
+         'edit_dokter'=>$editdokter,
+         'pasien'=>$pasien,
+         'dokter'=>$dokter
+        ]);
+    }
     // $sended =
     return view('admin.adinputdata',[
         'pasien'=>$pasien,
         'dokter'=>$dokter
-
     ]);
   }
   public function rekammedis()

@@ -1,6 +1,12 @@
 @extends('admin.admain')
 @section('content')
 @include('admin.partial.sidebarad')
+@if (session()->has('success'))
+<script>
+    alert('{{ session('success') }}')
+   
+</script>            
+@endif
 <div class="container-fluid">
 
 <div class="row">
@@ -23,10 +29,11 @@
           <!-- Pencarian berdasarkan nama form -->
         <form action="" method="post">
           @csrf
+          @csrf
             <div class="row mb-3">
                 <label for="fullName" class="col-md-4 col-lg-3 ">Nama Lengkap</label>
                 <div class="col-md-8">
-                  <select class="form-control" name="nama pasien">
+                  <select class="form-control" name="id_pasien">
                     <option value="0">Pilih Nama</option>
                     @foreach ($pasien as $item)
                     <option value="{{ $item->id }}">{{ $item->nama }}</option>
@@ -62,33 +69,52 @@
         <option>Batra</option>
         <option>Anak</option>
     </select> --}}
+    <form action="/update-profile-pasien" method="post" class="forms-sample">
+      @csrf
+      @isset($edit_pasien)
+      <input type="hidden" name="id" value="{{ $edit_pasien->id }}">
+      @endisset
+      <div class="form-group">
+        <label for="">Nama Pasien</label>
+        <input required type="text" @isset($edit_pasien)
+            value="{{$edit_pasien->nama}}"
+        @endisset name="nama" class="form-control" id="">
+      </div>
+      <div class="form-group">
+        <label for="">Alamat</label>
+        <input required type="text" @isset($edit_pasien)
+        value="{{ $edit_pasien->alamat }}"
+        @endisset name="alamat" class="form-control" id="">
+      </div>
+      <div class="form-group">
+        <label for="">Tanggal Lahir</label>
+        <input required type="date"@isset($edit_pasien)
+        value="{{$edit_pasien->tanggal_lahir}}"
+         @endisset name="tanggal_lahir"  class="form-control" id="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputCity1">No Telepon</label>
+        <input required type="text"@isset($edit_pasien)
+        value="{{$edit_pasien->no_telepon}}"
+          @endisset name="no_telepon" class="form-control" id="exampleInputCity1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputCity1">Jenis Kelamin</label>
+        <select class="form-select form-control" name="jenis_kelamin" id="">
+          @isset($edit_pasien)
+            <option value="{{$edit_pasien->jenis_kelamin}}" selected>{{$edit_pasien->jenis_kelamin}}</option>
+            @else
+            <option value="0" selected>Pilih Jenis Kelamin</option>
+          @endisset
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+          <option value="Non Biner">Non Biner</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success mr-2">Submit</button>
+      <button class="btn btn-light">Cancel</button>
+    </form>
      
-      <form class="forms-sample">
-        <div class="form-group">
-          <label for="">Nama Pasien</label>
-          <input required type="text" @isset($selectedpasien)
-              value=""
-          @endisset name="nama" class="form-control" id="">
-        </div>
-        <div class="form-group">
-          <label for="">Alamat</label>
-          <input required type="password" class="form-control" id="">
-        </div>
-        <div class="form-group">
-          <label for="">Tanggal Lahir</label>
-          <input required type="date"  class="form-control" id="">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputCity1">No Telepon</label>
-          <input required type="text" class="form-control" id="exampleInputCity1">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputCity1">Alamat</label>
-          <input required type="text" class="form-control" id="exampleInputCity1">
-        </div>
-        <button type="submit" class="btn btn-success mr-2">Submit</button>
-        <button class="btn btn-light">Cancel</button>
-      </form>
     </div>
   </div>
 </div>
@@ -113,7 +139,7 @@
             <div class="row mb-3">
                 <label for="fullName" class="col-md-4 col-lg-3 ">Nama Lengkap</label>
                 <div class="col-md-8">
-                  <select class="form-control" name="nama">
+                  <select class="form-control" name="id_dokter">
                     <option value="0">Pilih Nama</option>
                     @foreach ($dokter as $item)
                     <option value="{{ $item->id }}">{{ $item->nama }}</option>
@@ -137,7 +163,7 @@
   </div>
   <div class="card card-body">
   <h4 class="card-title">Edit Data Dokter</h4>
-  <label for="">POLI</label>
+  {{-- <label for="">POLI</label>
       <select class="form-control">
         <option>Umum</option>
         <option>Gigi</option>
@@ -147,36 +173,53 @@
         <option>Gizi</option>
         <option>Batra</option>
         <option>Anak</option>
-    </select>
+    </select> --}}
  
-  <form class="forms-sample">
-    <div class="mt-3 form-group">
-      <label for="exampleInputName1">ID Dokter</label>
-      <input required type="text" class="form-control" id="exampleInputName1">
-    </div>
-    <div class="mt-3 form-group">
-      <label for="">Nama Dokter</label>
-      <input required type="email" class="form-control" id="">
-    </div>
-    <div class="form-group">
-      <label for="">Alamat</label>
-      <input required type="password" class="form-control" id="">
-    </div>
-    <div class="form-group">
-      <label for="">Email</label>
-      <input required type="password" class="form-control" id="">
-    </div>
-    <div class="form-group">
-      <label for="">No Telepon</label>
-      <input required type="password" class="form-control" id="">
-    </div>
-    <div class="form-group">
-      <label for="">Spesialis</label>
-      <input required type="password" class="form-control" id="">
-    </div>
-    <button type="submit" class="btn btn-success mr-2">Submit</button>
-    <button class="btn btn-light">Cancel</button>
-  </form>
+    <form action="/update-profile-dokter" method="post" class="forms-sample">
+      @csrf
+      @isset($edit_dokter)
+      <input type="hidden" name="id" value="{{ $edit_dokter->id }}">
+      @endisset
+      <div class="form-group">
+        <label for="">Nama Pasien</label>
+        <input required type="text" @isset($edit_dokter)
+            value="{{$edit_dokter->nama}}"
+        @endisset name="nama" class="form-control" id="">
+      </div>
+      <div class="form-group">
+        <label for="">Alamat</label>
+        <input required type="text" @isset($edit_dokter)
+        value="{{$edit_dokter->alamat}}"
+        @endisset name="alamat" class="form-control" id="">
+      </div>
+      <div class="form-group">
+        <label for="">Tanggal Lahir</label>
+        <input required type="date"@isset($edit_dokter)
+        value="{{$edit_dokter->tanggal_lahir}}"
+         @endisset name="tanggal_lahir"  class="form-control" id="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputCity1">No Telepon</label>
+        <input required type="text"@isset($edit_dokter)
+        value="{{$edit_dokter->no_telepon}}"
+          @endisset name="no_telepon" class="form-control" id="exampleInputCity1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputCity1">Jenis Kelamin</label>
+        <select class="form-select form-control" name="jenis_kelamin" id="">
+          @isset($edit_dokter)
+            <option value="{{$edit_dokter->jenis_kelamin}}" selected>{{$edit_dokter->jenis_kelamin}}</option>
+            @else
+            <option value="0" selected>Pilih Jenis Kelamin</option>
+          @endisset
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+          <option value="Non Biner">Non Biner</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success mr-2">Submit</button>
+      <button class="btn btn-light">Cancel</button>
+    </form>
 </div>
 
 </div>

@@ -20,6 +20,7 @@ class User extends Authenticatable{
     protected $table = 'users';
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
+    protected $hidden = ['password'];
     // protected $fillable=['nama', 'email', 'password'];
     /**
      * Get all of the reservasi for the User

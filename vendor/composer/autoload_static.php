@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
+class ComposerStaticInit743f06f54246089c45f7779a52ce81be
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -341,8 +341,8 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -515,22 +515,17 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\ArtikelController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArtikelController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\DetailDiagnosisController' => __DIR__ . '/../..' . '/app/Http/Controllers/DetailDiagnosisController.php',
         'App\\Http\\Controllers\\DetailJadwalController' => __DIR__ . '/../..' . '/app/Http/Controllers/DetailJadwalController.php',
-        'App\\Http\\Controllers\\DetailObatController' => __DIR__ . '/../..' . '/app/Http/Controllers/DetailObatController.php',
-        'App\\Http\\Controllers\\DiagnosisController' => __DIR__ . '/../..' . '/app/Http/Controllers/DiagnosisController.php',
         'App\\Http\\Controllers\\DocrmController' => __DIR__ . '/../..' . '/app/Http/Controllers/DocrmController.php',
+        'App\\Http\\Controllers\\DocrmformController' => __DIR__ . '/../..' . '/app/Http/Controllers/DocrmformController.php',
         'App\\Http\\Controllers\\DoctorScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/DoctorScheduleController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\LaboratController' => __DIR__ . '/../..' . '/app/Http/Controllers/LaboratController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
-        'App\\Http\\Controllers\\ObatController' => __DIR__ . '/../..' . '/app/Http/Controllers/ObatController.php',
         'App\\Http\\Controllers\\PuskesmasController' => __DIR__ . '/../..' . '/app/Http/Controllers/PuskesmasController.php',
         'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Controllers\\RekamMedisController' => __DIR__ . '/../..' . '/app/Http/Controllers/RekamMedisController.php',
         'App\\Http\\Controllers\\ReservasiController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReservasiController.php',
         'App\\Http\\Controllers\\ScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ScheduleController.php',
-        'App\\Http\\Controllers\\TindakanController' => __DIR__ . '/../..' . '/app/Http/Controllers/TindakanController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -570,14 +565,8 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'App\\Http\\Requests\\UpdatereservasiRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdatereservasiRequest.php',
         'App\\Models\\Artikel' => __DIR__ . '/../..' . '/app/Models/Artikel.php',
         'App\\Models\\DetailJadwal' => __DIR__ . '/../..' . '/app/Models/DetailJadwal.php',
-        'App\\Models\\Detail_diagnosis' => __DIR__ . '/../..' . '/app/Models/Detail_diagnosis.php',
-        'App\\Models\\Detail_obat' => __DIR__ . '/../..' . '/app/Models/Detail_obat.php',
-        'App\\Models\\Diagnosis' => __DIR__ . '/../..' . '/app/Models/Diagnosis.php',
         'App\\Models\\DoctorSchedule' => __DIR__ . '/../..' . '/app/Models/DoctorSchedule.php',
-        'App\\Models\\Laborat' => __DIR__ . '/../..' . '/app/Models/Laborat.php',
-        'App\\Models\\Obat' => __DIR__ . '/../..' . '/app/Models/Obat.php',
         'App\\Models\\RekamMedis' => __DIR__ . '/../..' . '/app/Models/RekamMedis.php',
-        'App\\Models\\Tindakan' => __DIR__ . '/../..' . '/app/Models/Tindakan.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
         'App\\Models\\dokter' => __DIR__ . '/../..' . '/app/Models/dokter.php',
@@ -805,17 +794,11 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Database\\Seeders\\AdminSeeder' => __DIR__ . '/../..' . '/database/seeders/AdminSeeder.php',
         'Database\\Seeders\\ArtikelSeeder' => __DIR__ . '/../..' . '/database/seeders/ArtikelSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
-        'Database\\Seeders\\DetailDiagnosisSeeder' => __DIR__ . '/../..' . '/database/seeders/DetailDiagnosisSeeder.php',
         'Database\\Seeders\\DetailJadwalSeeder' => __DIR__ . '/../..' . '/database/seeders/DetailJadwalSeeder.php',
-        'Database\\Seeders\\DetailObatSeeder' => __DIR__ . '/../..' . '/database/seeders/DetailObatSeeder.php',
-        'Database\\Seeders\\DiagnosesSeeder' => __DIR__ . '/../..' . '/database/seeders/DiagnosesSeeder.php',
         'Database\\Seeders\\DoctorScheduleSeeder' => __DIR__ . '/../..' . '/database/seeders/DoctorScheduleSeeder.php',
-        'Database\\Seeders\\LaboratSeeder' => __DIR__ . '/../..' . '/database/seeders/LaboratSeeder.php',
         'Database\\Seeders\\LoginSeeder' => __DIR__ . '/../..' . '/database/seeders/LoginSeeder.php',
-        'Database\\Seeders\\ObatSeeder' => __DIR__ . '/../..' . '/database/seeders/ObatSeeder.php',
         'Database\\Seeders\\RekamMedisSeeder' => __DIR__ . '/../..' . '/database/seeders/RekamMedisSeeder.php',
         'Database\\Seeders\\ReservasiSeeder' => __DIR__ . '/../..' . '/database/seeders/ReservasiSeeder.php',
-        'Database\\Seeders\\TindakanSeeder' => __DIR__ . '/../..' . '/database/seeders/TindakanSeeder.php',
         'Database\\Seeders\\UserSeeder' => __DIR__ . '/../..' . '/database/seeders/UserSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
@@ -3608,6 +3591,7 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'PHPUnit\\Framework\\MockObject\\CannotUseOnlyMethodsException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/CannotUseOnlyMethodsException.php',
         'PHPUnit\\Framework\\MockObject\\ClassAlreadyExistsException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/ClassAlreadyExistsException.php',
         'PHPUnit\\Framework\\MockObject\\ClassIsFinalException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/ClassIsFinalException.php',
+        'PHPUnit\\Framework\\MockObject\\ClassIsReadonlyException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/ClassIsReadonlyException.php',
         'PHPUnit\\Framework\\MockObject\\ConfigurableMethod' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/ConfigurableMethod.php',
         'PHPUnit\\Framework\\MockObject\\ConfigurableMethodsAlreadyInitializedException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/ConfigurableMethodsAlreadyInitializedException.php',
         'PHPUnit\\Framework\\MockObject\\DuplicateMethodException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/DuplicateMethodException.php',
@@ -3817,6 +3801,7 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'PHPUnit\\Util\\Annotation\\DocBlock' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Annotation/DocBlock.php',
         'PHPUnit\\Util\\Annotation\\Registry' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Annotation/Registry.php',
         'PHPUnit\\Util\\Blacklist' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Blacklist.php',
+        'PHPUnit\\Util\\Cloner' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Cloner.php',
         'PHPUnit\\Util\\Color' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Color.php',
         'PHPUnit\\Util\\ErrorHandler' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/ErrorHandler.php',
         'PHPUnit\\Util\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Exception.php',
@@ -4313,6 +4298,7 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Psy\\Output\\PassthruPager' => __DIR__ . '/..' . '/psy/psysh/src/Output/PassthruPager.php',
         'Psy\\Output\\ProcOutputPager' => __DIR__ . '/..' . '/psy/psysh/src/Output/ProcOutputPager.php',
         'Psy\\Output\\ShellOutput' => __DIR__ . '/..' . '/psy/psysh/src/Output/ShellOutput.php',
+        'Psy\\Output\\Theme' => __DIR__ . '/..' . '/psy/psysh/src/Output/Theme.php',
         'Psy\\ParserFactory' => __DIR__ . '/..' . '/psy/psysh/src/ParserFactory.php',
         'Psy\\Readline\\GNUReadline' => __DIR__ . '/..' . '/psy/psysh/src/Readline/GNUReadline.php',
         'Psy\\Readline\\HoaConsole' => __DIR__ . '/..' . '/psy/psysh/src/Readline/HoaConsole.php',
@@ -4413,9 +4399,15 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Psy\\VarDumper\\Presenter' => __DIR__ . '/..' . '/psy/psysh/src/VarDumper/Presenter.php',
         'Psy\\VarDumper\\PresenterAware' => __DIR__ . '/..' . '/psy/psysh/src/VarDumper/PresenterAware.php',
         'Psy\\VersionUpdater\\Checker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/Checker.php',
+        'Psy\\VersionUpdater\\Downloader' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/Downloader.php',
+        'Psy\\VersionUpdater\\Downloader\\CurlDownloader' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/Downloader/CurlDownloader.php',
+        'Psy\\VersionUpdater\\Downloader\\Factory' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/Downloader/Factory.php',
+        'Psy\\VersionUpdater\\Downloader\\FileDownloader' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/Downloader/FileDownloader.php',
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
+        'Psy\\VersionUpdater\\Installer' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/Installer.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'Psy\\VersionUpdater\\SelfUpdate' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/SelfUpdate.php',
         'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
         'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
         'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',
@@ -4466,6 +4458,7 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Ramsey\\Uuid\\Converter\\Time\\DegradedTimeConverter' => __DIR__ . '/..' . '/ramsey/uuid/src/Converter/Time/DegradedTimeConverter.php',
         'Ramsey\\Uuid\\Converter\\Time\\GenericTimeConverter' => __DIR__ . '/..' . '/ramsey/uuid/src/Converter/Time/GenericTimeConverter.php',
         'Ramsey\\Uuid\\Converter\\Time\\PhpTimeConverter' => __DIR__ . '/..' . '/ramsey/uuid/src/Converter/Time/PhpTimeConverter.php',
+        'Ramsey\\Uuid\\Converter\\Time\\UnixTimeConverter' => __DIR__ . '/..' . '/ramsey/uuid/src/Converter/Time/UnixTimeConverter.php',
         'Ramsey\\Uuid\\DegradedUuid' => __DIR__ . '/..' . '/ramsey/uuid/src/DegradedUuid.php',
         'Ramsey\\Uuid\\DeprecatedUuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/DeprecatedUuidInterface.php',
         'Ramsey\\Uuid\\DeprecatedUuidMethodsTrait' => __DIR__ . '/..' . '/ramsey/uuid/src/DeprecatedUuidMethodsTrait.php',
@@ -4501,6 +4494,7 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Ramsey\\Uuid\\Generator\\RandomLibAdapter' => __DIR__ . '/..' . '/ramsey/uuid/src/Generator/RandomLibAdapter.php',
         'Ramsey\\Uuid\\Generator\\TimeGeneratorFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/Generator/TimeGeneratorFactory.php',
         'Ramsey\\Uuid\\Generator\\TimeGeneratorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Generator/TimeGeneratorInterface.php',
+        'Ramsey\\Uuid\\Generator\\UnixTimeGenerator' => __DIR__ . '/..' . '/ramsey/uuid/src/Generator/UnixTimeGenerator.php',
         'Ramsey\\Uuid\\Guid\\Fields' => __DIR__ . '/..' . '/ramsey/uuid/src/Guid/Fields.php',
         'Ramsey\\Uuid\\Guid\\Guid' => __DIR__ . '/..' . '/ramsey/uuid/src/Guid/Guid.php',
         'Ramsey\\Uuid\\Guid\\GuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Guid/GuidBuilder.php',
@@ -4525,8 +4519,11 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Ramsey\\Uuid\\Provider\\Time\\SystemTimeProvider' => __DIR__ . '/..' . '/ramsey/uuid/src/Provider/Time/SystemTimeProvider.php',
         'Ramsey\\Uuid\\Rfc4122\\Fields' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/Fields.php',
         'Ramsey\\Uuid\\Rfc4122\\FieldsInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/FieldsInterface.php',
+        'Ramsey\\Uuid\\Rfc4122\\MaxTrait' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/MaxTrait.php',
+        'Ramsey\\Uuid\\Rfc4122\\MaxUuid' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/MaxUuid.php',
         'Ramsey\\Uuid\\Rfc4122\\NilTrait' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/NilTrait.php',
         'Ramsey\\Uuid\\Rfc4122\\NilUuid' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/NilUuid.php',
+        'Ramsey\\Uuid\\Rfc4122\\TimeTrait' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/TimeTrait.php',
         'Ramsey\\Uuid\\Rfc4122\\UuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidBuilder.php',
         'Ramsey\\Uuid\\Rfc4122\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidInterface.php',
         'Ramsey\\Uuid\\Rfc4122\\UuidV1' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV1.php',
@@ -4534,6 +4531,9 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Ramsey\\Uuid\\Rfc4122\\UuidV3' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV3.php',
         'Ramsey\\Uuid\\Rfc4122\\UuidV4' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV4.php',
         'Ramsey\\Uuid\\Rfc4122\\UuidV5' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV5.php',
+        'Ramsey\\Uuid\\Rfc4122\\UuidV6' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV6.php',
+        'Ramsey\\Uuid\\Rfc4122\\UuidV7' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV7.php',
+        'Ramsey\\Uuid\\Rfc4122\\UuidV8' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/UuidV8.php',
         'Ramsey\\Uuid\\Rfc4122\\Validator' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/Validator.php',
         'Ramsey\\Uuid\\Rfc4122\\VariantTrait' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/VariantTrait.php',
         'Ramsey\\Uuid\\Rfc4122\\VersionTrait' => __DIR__ . '/..' . '/ramsey/uuid/src/Rfc4122/VersionTrait.php',
@@ -4738,10 +4738,12 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'SebastianBergmann\\Type\\NeverType' => __DIR__ . '/..' . '/sebastian/type/src/type/NeverType.php',
         'SebastianBergmann\\Type\\NullType' => __DIR__ . '/..' . '/sebastian/type/src/type/NullType.php',
         'SebastianBergmann\\Type\\ObjectType' => __DIR__ . '/..' . '/sebastian/type/src/type/ObjectType.php',
+        'SebastianBergmann\\Type\\Parameter' => __DIR__ . '/..' . '/sebastian/type/src/Parameter.php',
         'SebastianBergmann\\Type\\ReflectionMapper' => __DIR__ . '/..' . '/sebastian/type/src/ReflectionMapper.php',
         'SebastianBergmann\\Type\\RuntimeException' => __DIR__ . '/..' . '/sebastian/type/src/exception/RuntimeException.php',
         'SebastianBergmann\\Type\\SimpleType' => __DIR__ . '/..' . '/sebastian/type/src/type/SimpleType.php',
         'SebastianBergmann\\Type\\StaticType' => __DIR__ . '/..' . '/sebastian/type/src/type/StaticType.php',
+        'SebastianBergmann\\Type\\TrueType' => __DIR__ . '/..' . '/sebastian/type/src/type/TrueType.php',
         'SebastianBergmann\\Type\\Type' => __DIR__ . '/..' . '/sebastian/type/src/type/Type.php',
         'SebastianBergmann\\Type\\TypeName' => __DIR__ . '/..' . '/sebastian/type/src/TypeName.php',
         'SebastianBergmann\\Type\\UnionType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnionType.php',
@@ -4889,6 +4891,7 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
         'Spatie\\LaravelIgnition\\Support\\LaravelDocumentationLinkFinder' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/LaravelDocumentationLinkFinder.php',
         'Spatie\\LaravelIgnition\\Support\\LaravelVersion' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/LaravelVersion.php',
         'Spatie\\LaravelIgnition\\Support\\LivewireComponentParser' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/LivewireComponentParser.php',
+        'Spatie\\LaravelIgnition\\Support\\RunnableSolutionsGuard' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/RunnableSolutionsGuard.php',
         'Spatie\\LaravelIgnition\\Support\\SentReports' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/SentReports.php',
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
@@ -5874,10 +5877,10 @@ class ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit12bfd7ca76d8eb7646c2b7e1e648afeb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit743f06f54246089c45f7779a52ce81be::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit743f06f54246089c45f7779a52ce81be::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit743f06f54246089c45f7779a52ce81be::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit743f06f54246089c45f7779a52ce81be::$classMap;
 
         }, null, ClassLoader::class);
     }
