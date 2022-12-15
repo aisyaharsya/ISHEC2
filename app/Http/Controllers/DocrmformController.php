@@ -24,7 +24,7 @@ class DocrmformController extends Controller
     }
 
     public function insertdata(Request $request) {
-        // dd($request->id);
+        // dd($request);
         $validatedData = $request->validate([
             'no_pasien' => 'required',
             'sistol' => 'required',
@@ -44,8 +44,9 @@ class DocrmformController extends Controller
             'dokter_pemeriksa' => 'required',
             'jenis_kelamin' => 'required'
         ]);
-        // dd($validatedData);
-        RekamMedis::where('id', $request->id )->update($validatedData);
+        // dd($validatedData);\
+        RekamMedis::create($validatedData);
+        // RekamMedis::where('id', $request->id )->update($validatedData);
         return redirect('/docrm');
     }
 

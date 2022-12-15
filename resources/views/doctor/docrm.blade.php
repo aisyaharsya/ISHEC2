@@ -108,6 +108,7 @@
                             @csrf
                             <input type="hidden" name="id" value="{{$data->id}}">
                           <button type="submit" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#">view</button>
+                          </form>
                       </td>
                     </tr>
                     @endforeach
