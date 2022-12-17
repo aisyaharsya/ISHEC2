@@ -135,6 +135,10 @@ class PuskesmasController extends Controller
 
     ]);
   }
+  public function dashboardpasien()
+  {
+    return view('pasien.dashboardpasien');
+  }
   public function updateProfile()
   {
     User::find(request('id'))->update([
