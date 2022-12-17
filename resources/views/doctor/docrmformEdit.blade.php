@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-lg-10">
 
-          <form action="/insertdata" method="POST">
+          <form action="/editdata" method="POST">
             @csrf
             <div class="card">
               <div class="card-body">

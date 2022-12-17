@@ -25,8 +25,12 @@ use App\Models\DoctorSchedule;
     Route::get('/', [HomeController::class, 'home']);
     Route::post('/', [HomeController::class, 'findjadwal']);
     Route::post('/lihat-artikel', [PuskesmasController::class, 'lihatartikel']);
+
     Route::get('/login', [LoginController::class, 'login'])->middleware('guest')->name('login');
+
+
     Route::post('/login', [LoginController::class, 'authenticate']);
+
     Route::any('/logout', [LoginController::class, 'logout']);
     Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
     Route::post('/register', [RegisterController::class, 'store']);
@@ -35,10 +39,13 @@ use App\Models\DoctorSchedule;
     // 0 admin
     Route::get('/profile',[PuskesmasController::class,'profile'])->middleware('auth');
     Route::post('/profile',[PuskesmasController::class,'profilepost'])->middleware('auth');
+
     Route::group(['middleware'=>['auth','cekLevel:0']],function ()
     {
         route::get('/ad',[PuskesmasController::class, 'ad']);
+
         Route::get('/rekam-medis',[PuskesmasController::class,'rekammedis']);
+
         Route::post('/rekam-medis',[PuskesmasController::class,'rekammedisfind']);
         Route::get('/input-data',[PuskesmasController::class,'InputData']);
         Route::post('/input-data',[PuskesmasController::class,'InputDatafind']);
@@ -56,9 +63,8 @@ use App\Models\DoctorSchedule;
         Route::get('/docrm', [DocrmformController::class, 'view']);
         Route::post('/lihatrm', [DocrmformController::class, 'lihatrm']);
         Route::get('/docrmformEdit/{id}', [DocrmformController::class, 'edit']);
+        Route::post('/edit', [DocrmformController::class, 'editpost']);
         Route::delete('/hapus/{id}', [DocrmformController::class, 'destroy']);
-
-
 
     });
     // 2 pasien

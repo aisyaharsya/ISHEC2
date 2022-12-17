@@ -22,9 +22,14 @@ class DocrmformController extends Controller
         $data = RekamMedis::all();
         return view('doctor/docrm', compact('data'));
     }
-
+    
+    public function editpost()
+    {
+        
+    }
     public function insertdata(Request $request) {
         // dd($request);
+       
         $validatedData = $request->validate([
             'no_pasien' => 'required',
             'sistol' => 'required',

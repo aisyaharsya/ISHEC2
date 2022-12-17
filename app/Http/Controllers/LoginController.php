@@ -19,11 +19,7 @@ class LoginController extends Controller
         ]);
         $email = $request->email;
         $password = $request->password;
-
-        // if (Auth::attempt($credentials)){
-        //     $request->session()->regenerate();
-        //     return redirect()->intended('/')->with('success', 'berhasil');
-        // }
+        
         if (Auth::attempt(array('email' => $email, 'password' => $password, 'level' => 0))) {
             $request->session()->regenerate();
             return redirect('/ad');
