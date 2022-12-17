@@ -43,13 +43,13 @@ use App\Models\DoctorSchedule;
     Route::group(['middleware'=>['auth','cekLevel:0']],function ()
     {
         route::get('/ad',[PuskesmasController::class, 'ad']);
-
+        route::post('/ad',[PuskesmasController::class, 'adpost']);
         Route::get('/rekam-medis',[PuskesmasController::class,'rekammedis']);
-
         Route::post('/rekam-medis',[PuskesmasController::class,'rekammedisfind']);
         Route::get('/input-data',[PuskesmasController::class,'InputData']);
         Route::post('/input-data',[PuskesmasController::class,'InputDatafind']);
         Route::post('/update-profile-pasien',[PuskesmasController::class,'updateProfile']);
+        Route::post('/update-profile-dokter',[PuskesmasController::class,'updateProfile']);
         Route::get('/adartikel', [PuskesmasController::class, 'adartikel']);
     });
     // 1 dokter

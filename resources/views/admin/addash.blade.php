@@ -1,6 +1,12 @@
 @extends('admin.admain')
 @section('content')
 @include('admin.partial.sidebarad')
+
+@if (session()->has('success'))
+<script type="text/javascript">
+  alert('{{ session('success') }}')
+</script>
+        @endif
 <body>
     <div class="container">
         <div class="row">
@@ -85,8 +91,55 @@
           </div>
 
 
+          <div class="col-md-12 grid-margin mt-5 stretch-card">
+            <div class="card">
+              <div class="card-body pt-3">
+                <!-- Bordered Tabs -->
+                <ul class="nav nav-tabs nav-tabs-bordered">
+            
+                  <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#artikeledit">Buat Artikel</button>
+                  </li>
+                
+
+                </ul>
+                <form action="" method="POST" enctype="multipart/form-data">
+                  @csrf
+                <div class="tab-content pt-2">
+                  <div class="tab-pane container fade profile-edit pt-3" id="artikeledit">
+                    <div class="row mb-1">
+                      <label for="" class=""> Judul Artikel</label>
+                    </div>
+                    <div class="row mb-3">
+                      <input type="text" name="judul" class="form-control  border-5 " placeholder="" aria-label="Isi" aria-describedby="basic-addon2">
+                    </div>
+                    <div class="row mb-1">
+                      <label for="" class="">Gambar Artikel</label> 
+                    </div>
+                    <div class="row mb-5">
+                      <input type="file" name="gambar" class="form-control  border-5 " placeholder="" aria-label="Isi" aria-describedby="basic-addon2">
+                    </div>
+                   <div class="row mb-3">
+                    <div class="col-md-1">
+                      <label for="fullName" class="">Isi Artikel</label>
+                    </div>
+                    <div class="col-md-11">
+                      <textarea name="isi" class="form-control border-5 "  ></textarea>
+                    </div>
+                   </div>
+
+                        <center>
+                <button type="submit" class="btn btn-outline-primary" role="button" fdprocessedid="fh00t">Submit</button>
+            </center>
+          </form>
+                      </div>
+                  </div>
         </div>
     </div>
+
+    
+    
+              </div>
 
 
         

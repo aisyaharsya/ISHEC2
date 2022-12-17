@@ -29,7 +29,6 @@
           <!-- Pencarian berdasarkan nama form -->
         <form action="" method="post">
           @csrf
-          @csrf
             <div class="row mb-3">
                 <label for="fullName" class="col-md-4 col-lg-3 ">Nama Lengkap</label>
                 <div class="col-md-8">

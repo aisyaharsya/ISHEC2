@@ -68,6 +68,21 @@ class PuskesmasController extends Controller
 
         return view('admin/adlogin');
     }
+    public function adpost(Request $request)
+    {
+        $pict = $request->file('gambar');
+        $pictFolder = 'assets/img/portfolio/';
+        $pictName = $pict->getClientOriginalName();
+        $pict->move($pictFolder, $pictName);
+       $data = [
+        'title'=>request('judul'),
+        'lokasi_img'=>'assets/img/portfolio/'.$pict->getClientOriginalName(),
+        'body'=>$request->isi,
+        'excerpt'=>$request->isi,
+       ];
+       Artikel::create($data);
+       return back()->withSuccess('Data berhasil ditambahkan');
+    }
   public function ad()
   {
     $date = date('Y-m-d');
@@ -104,6 +119,7 @@ class PuskesmasController extends Controller
         return back()->withSuccess('Data berhasil di ubah');
     }
     if(Auth::user()->level == 1){
+        
         return view();
     }
     if(Auth::user()->level == 2){
@@ -168,7 +184,7 @@ class PuskesmasController extends Controller
     $pasien = User::where('level','2')->get();
 
     $rekam = DB::table('rekam_medis')
-            ->join('users', 'users.id', '=', 'rekam_medis.id_pasien')
+            ->join('users', 'users.id', '=', 'rekam_medis.no_pasien')
             ->get();
     return view('admin.adrekam',[
         'pasien'=>$pasien,
