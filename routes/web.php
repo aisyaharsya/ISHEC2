@@ -70,8 +70,11 @@ use App\Models\DoctorSchedule;
     // 2 pasien
     Route::group(['middleware'=>['auth','cekLevel:2']],function ()
     {
-        
+        Route::get('/dashboard-pasien', [PuskesmasController::class ,'dashboardpasien']);
+        Route::get('/reservasi',[PuskesmasController::class,'reservasi']);
+    
+
     });
     Route::resource('/schedule', ScheduleController::class);
     
-    Route::get('/dashboard-pasien', [PuskesmasController::class ,'dashboardpasien']);
+    

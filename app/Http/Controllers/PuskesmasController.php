@@ -200,4 +200,8 @@ class PuskesmasController extends Controller
         return view('doctor/docregister');
     }
 
+    public function reservasi(){
+        return view('pasien.reservasi');
+    }
+
 }

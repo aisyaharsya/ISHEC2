@@ -21,7 +21,7 @@
                                 Selamat datang {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="/dashboard-pasien">Dashboard</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
                                     <form action="/logout" method="post">
@@ -108,7 +108,7 @@
                     <div class="col-md-6">
                         <label for="inputDate" class="form-label "style="font-family: Verdana, Geneva, Tahoma, sans-serif">DATE</label>
                         <div class="col-sm-15">
-                          <input type="date" name="date" class="form-control"style="border-radius: 30px">
+                          <input type="date" name="date" required class="form-control"style="border-radius: 30px">
                         </div>
                     </div>
                     {{-- <div class="col-md-5">
