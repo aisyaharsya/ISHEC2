@@ -103,7 +103,7 @@ class PuskesmasController extends Controller
         return view();
     }
     if(Auth::user()->level == 2){
-        return view();
+        return view('pasien.profile');
     }
   }
   public function profilepost()
@@ -123,7 +123,14 @@ class PuskesmasController extends Controller
         return view();
     }
     if(Auth::user()->level == 2){
-        return view();
+        User::find(Auth::user()->id)->update([
+            'nama' =>request('nama'),
+            'tanggal_lahir' =>request('tanggal_lahir'),
+            'alamat' =>request('alamat'),
+            'no_telepon' =>request('no_telepon'),
+            'jenis_kelamin' =>request('jenis_kelamin'),
+        ]);
+        return back()->withSuccess('Data berhasil di ubah');
     }
   }
   public function InputData (){
@@ -137,7 +144,11 @@ class PuskesmasController extends Controller
   }
   public function dashboardpasien()
   {
-    return view('pasien.dashboardpasien');
+    $reservasi = reservasi::where('id_pasien',auth()->user()->id)->orderBy('tgl_hadir')->get();
+    // dd($reservasi);
+    return view('pasien.dashboardpasien',[
+        'reservasiss'=> $reservasi
+    ]);
   }
   public function updateProfile()
   {
@@ -203,5 +214,15 @@ class PuskesmasController extends Controller
     public function reservasi(){
         return view('pasien.reservasi');
     }
-
+    public function buatreservasi($date)
+    {
+        $data = [
+            'id_pasien'=>auth()->user()->id,
+            'tgl_reservasi'=>date('Y-m-d'),
+            'tgl_hadir'=>$date,
+            'status_reservasi'=>'belum hadir'
+        ];
+        reservasi::create($data);
+        return redirect('/dashboard-pasien')->withSuccess('Reservasi berhasil dibuat');
+    }
 }

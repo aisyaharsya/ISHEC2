@@ -11,29 +11,29 @@
                   {{-- logo taruh sini --}}
                     {{-- <img src="img/logo.png" alt="" width="40"> --}}
                 </div>
-                <div class="sidebar-brand-text mx-3">ISHEC</div>
+                <div class="sidebar-brand-text mx-3">ISHEC </div>
             </a>
   
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
   
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="/dashboard-pasien">
+            <li class="nav-item {{substr(strrchr(url()->current(),"/"),1)=='dashboard-pasien'? 'active' :' '}}">
+                <a class="nav-link " href="/dashboard-pasien">
                     <i class="fa-solid fa-gauge"></i>
                     <span>Dashboard</span></a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="/input-data">
                     <i class="fa-solid fa-calendar"></i>
                     <span>Jadwal </span></a>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="/rekam-medis">
                     <i class="fa-solid fa-notes-medical"></i>
                     <span>Riwayat Pemeriksaan</span></a>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            <li class="nav-item {{substr(strrchr(url()->current(),"/"),1)=='profile'? 'active' :' '}}">
                 <a class="nav-link" href="/profile">
                     <i class="fa-solid fa-user"></i>
                     <span>Profile</span></a>

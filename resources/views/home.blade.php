@@ -244,7 +244,7 @@
             <script>
                 alert('{{ session('found') }}')
                 if (confirm('apakah anda ingin membuat reservasi')) {
-                    window.location.href = '/reservasi';
+                    window.location.href = '/buat-reservasi/{{session('date')}}';
                 }
             </script>            
         @endif

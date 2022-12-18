@@ -72,7 +72,9 @@ use App\Models\DoctorSchedule;
     {
         Route::get('/dashboard-pasien', [PuskesmasController::class ,'dashboardpasien']);
         Route::get('/reservasi',[PuskesmasController::class,'reservasi']);
+        Route::get('/buat-reservasi/{date}',[PuskesmasController::class,'buatreservasi']);
     
+        
 
     });
     Route::resource('/schedule', ScheduleController::class);

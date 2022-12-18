@@ -25,11 +25,12 @@ class HomeController extends Controller
         ]);
        
     }
+    
     public function findjadwal()
     {
     $jadwalFind = DoctorSchedule::where('tanggal',request('date'))->count();
         if($jadwalFind>0){
-            return back()->with('found','Jadwal ditemukan');
+            return back()->with('found','Jadwal ditemukan')->with('date',request('date'));
         }else{
             return back()->with('notfound','Jadwal tidak ditemukan');
         }
